@@ -1,0 +1,40 @@
+.btnPrimary {
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: 10px 20px;
+  border: 2px solid var(--foreground);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: var(--font-size);
+  padding: var(--btn-padding);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btnPrimary:hover {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+.btnAction {
+  background-color: var(--primary);
+  color: var(--background);
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  padding: var(--btn-padding);
+  font-size: var(--font-size);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btnAction:hover {
+  background-color: var(--primary-light);
+}

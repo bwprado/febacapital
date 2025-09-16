@@ -1,0 +1,6 @@
+.whatsappButton {
+  font-size: var(--text-xs);
+  width: 138px;
+  height: 46px;
+  padding: 14px 8px;
+}

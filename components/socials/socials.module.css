@@ -1,0 +1,22 @@
+.socialIcons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  height: 100%;
+  list-style: none;
+}
+
+.socialIcon {
+  display: flex;
+  color: var(--foreground);
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.socialIcon:hover {
+  color: var(--primary);
+}
