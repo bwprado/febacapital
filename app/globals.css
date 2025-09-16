@@ -117,7 +117,6 @@ textarea:not([rows]) {
   /* VARIABLES */
   --background: #ffffff;
   --foreground: #000000;
-  --primary-foreground: #03110d;
   --primary: #1aa584;
   --primary-light: #76c9b5;
   --primary-muted: #d1ede6;
@@ -139,16 +138,19 @@ textarea:not([rows]) {
   --footer-text: #ffffff;
   --footer-text-muted: #9ca3af;
   --footer-border: #6b7280;
+
+  --border-color: #1c1c1c;
+
+  --typography-foreground: #03110d;
+  --typography-foreground-light: #393939;
+  --typography-foreground-muted: #6f6f6f;
+  --typography-primary: var(--primary);
 }
 
 html,
 body {
   max-width: 100vw;
-  min-height: 100vh;
   overflow-x: hidden;
-}
-
-body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-urbanist), -apple-system, BlinkMacSystemFont,
@@ -158,7 +160,6 @@ body {
 }
 
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -179,8 +180,8 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   height: 100%;
+  width: 100%;
 }
 
 .main {
@@ -201,7 +202,6 @@ a {
   align-items: center;
   padding: 0 20px;
   justify-content: space-between;
-  height: 100%;
 }
 
 .menu {
@@ -227,27 +227,9 @@ a {
   cursor: pointer;
 }
 
-.footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
 .logo {
   width: 100px;
   height: 100px;
   object-fit: contain;
   aspect-ratio: auto;
-}
-
-.social-login {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 14px;
-  justify-content: center;
-  height: 100%;
-  list-style: none;
 }

@@ -1,11 +1,11 @@
-import Image from 'next/image'
 import Button from '../button'
+import WhatsApp from '../icons/whatsapp'
 import styles from './whatsapp-button.module.css'
 
 export default function WhatsAppButton() {
   return (
     <Button variant="action" className={`${styles.whatsappButton} test`}>
-      <Image src="/whatsapp.svg" alt="WhatsApp" width={14} height={14} />
+      <WhatsApp fill="var(--background)" width={18} height={18} />
       WHATSAPP
     </Button>
   )

@@ -12,11 +12,20 @@
   display: flex;
   color: var(--foreground);
   align-items: center;
+  height: max-content;
   justify-content: center;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .socialIcon:hover {
+  color: var(--primary);
+}
+
+.darkMode {
+  color: var(--background);
+}
+
+.darkMode:hover {
   color: var(--primary);
 }

@@ -7,9 +7,7 @@ export default function Footer() {
   return (
     <footer className={styles.footerMain}>
       <div className={styles.footerContainer}>
-        {/* Main footer content */}
         <div className={styles.footerGrid}>
-          {/* Left column - Logo and description */}
           <div className={styles.footerSection}>
             <div className={styles.footerLogo}>
               <Image src="/liva.svg" alt="liva" width={108} height={43} />
@@ -23,7 +21,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Middle column - Navigation */}
           <div className={styles.footerSection}>
             <h3 className={styles.footerNavTitle}>NAVEGUE NO SITE</h3>
             <nav className={styles.footerNav}>
@@ -45,7 +42,11 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Right column - Contact and social */}
+          <div className={`${styles.footerSocialSection} ${styles.footerSocialSectionDarkMode}`}>
+            <p className={styles.footerSocialTitle}>Acompanhe nas redes</p>
+            <SocialLogin darkMode />
+          </div>
+
           <div className={styles.footerSection}>
             <p className={styles.footerDescription}>
               Duis aute irure dolor in reprehenderit
@@ -56,23 +57,18 @@ export default function Footer() {
               <p className={styles.footerContactInfo}>(11) 9909-9091</p>
               <p className={styles.footerContactInfo}>contato@liva.com.br</p>
             </div>
-            <div className={styles.footerSocialSection}>
-              <p className={styles.footerSocialTitle}>Acompanhe nas redes</p>
-              <SocialLogin />
-              <WhatsAppButton />
-            </div>
+            <WhatsAppButton />
           </div>
         </div>
 
-        {/* Bottom section - Copyright */}
         <div className={styles.footerBottom}>
           <div className={styles.footerBottomContent}>
             <p>Liva © 2022 Todos os direitos reservados.</p>
             <Image
               src="/febacapital.svg"
               alt="febacapital"
-              width={108}
-              height={43}
+              width={80}
+              height={10}
             />
           </div>
         </div>
