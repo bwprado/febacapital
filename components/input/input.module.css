@@ -1,0 +1,51 @@
+.input {
+  border: 2px solid var(--foreground);
+  color: var(--foreground);
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
+  font-family: var(--font-urbanist);
+  background: var(--background);
+  line-height: 1.2;
+  width: 100%;
+  font-weight: 500;
+  padding-left: 24px;
+  height: 48px;
+  transition: padding 0.2s ease;
+}
+
+.input::placeholder {
+  color: var(--foreground);
+  transition: opacity 0.2s ease;
+  opacity: 1;
+}
+
+.input:focus::placeholder {
+  opacity: 0;
+}
+
+.input:focus {
+  outline: none;
+  padding-top: 24px;
+  padding-bottom: 10px;
+}
+
+.inputGroup {
+  position: relative;
+  width: 100%;
+}
+
+.inputGroup label {
+  font-size: var(--text-sm);
+  font-family: var(--font-urbanist);
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  top: 14px;
+  left: 24px;
+  transform: translateY(-50%);
+  color: var(--typography-muted);
+}
+
+.inputGroup:focus-within label {
+  opacity: 1;
+}

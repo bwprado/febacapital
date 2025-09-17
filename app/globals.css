@@ -35,7 +35,6 @@ ol[role='list'] {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  line-height: 1.5;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -92,7 +91,7 @@ textarea:not([rows]) {
 @font-face {
   font-family: 'Urbane';
   src: url('/fonts/Urbane-Light.woff2') format('woff2'),
-       url('/fonts/Urbane-Light.woff') format('woff');
+    url('/fonts/Urbane-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -101,7 +100,7 @@ textarea:not([rows]) {
 @font-face {
   font-family: 'Urbane';
   src: url('/fonts/Urbane-Medium.woff2') format('woff2'),
-       url('/fonts/Urbane-Medium.woff') format('woff');
+    url('/fonts/Urbane-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -110,16 +109,16 @@ textarea:not([rows]) {
 @font-face {
   font-family: 'Urbane';
   src: url('/fonts/Urbane-DemiBold.woff2') format('woff2'),
-       url('/fonts/Urbane-DemiBold.woff') format('woff');
+    url('/fonts/Urbane-DemiBold.woff') format('woff');
   font-weight: 600;
-  font-style: normal;
+  font-style: demibold;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Urbane';
   src: url('/fonts/Urbane-Bold.woff2') format('woff2'),
-       url('/fonts/Urbane-Bold.woff') format('woff');
+    url('/fonts/Urbane-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -153,6 +152,8 @@ textarea:not([rows]) {
 
   --border-color: #1c1c1c;
 
+  --typography: var(--background);
+  --typography-muted: #a0a0a0;
   --typography-foreground: #03110d;
   --typography-foreground-light: #393939;
   --typography-foreground-muted: #6f6f6f;
@@ -165,8 +166,8 @@ body {
   overflow-x: hidden;
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Urbane', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Urbane', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -191,8 +192,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100%;
+  justify-content: flex-start;
+  min-height: 100vh;
   width: 100%;
 }
 

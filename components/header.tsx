@@ -3,7 +3,7 @@ import Menu from './menu'
 import SocialLogin from './socials'
 import WhatsAppButton from './whatsapp-button'
 
-export default function Header() {
+export default function Header({ menuItems }: { menuItems: string[] }) {
   return (
     <header className="header">
       <Image
@@ -13,15 +13,7 @@ export default function Header() {
         height={43}
         className="logo"
       />
-      <Menu
-        items={[
-          'HOME',
-          'SOBRE A LIVA',
-          'EMPREENDIMENTOS',
-          'NOTÍCIAS',
-          'CONTATO'
-        ]}
-      />
+      <Menu items={menuItems} />
       <SocialLogin />
       <WhatsAppButton />
     </header>

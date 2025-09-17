@@ -24,6 +24,8 @@
 
 .btnAction {
   background-color: var(--primary);
+  font-style: medium;
+  line-height: 1.2;
   color: var(--background);
   border: none;
 }

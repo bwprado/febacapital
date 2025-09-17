@@ -3,7 +3,7 @@ import SocialLogin from '../socials'
 import WhatsAppButton from '../whatsapp-button'
 import styles from './footer.module.css'
 
-export default function Footer() {
+export default function Footer({ menuItems }: { menuItems: string[] }) {
   return (
     <footer className={styles.footerMain}>
       <div className={styles.footerContainer}>
@@ -22,27 +22,19 @@ export default function Footer() {
           </div>
 
           <div className={styles.footerSection}>
-            <h3 className={styles.footerNavTitle}>NAVEGUE NO SITE</h3>
             <nav className={styles.footerNav}>
-              <a href="#" className={styles.footerNavLink}>
-                HOME
-              </a>
-              <a href="#" className={styles.footerNavLink}>
-                SOBRE A LIVA
-              </a>
-              <a href="#" className={styles.footerNavLink}>
-                EMPREENDIMENTOS
-              </a>
-              <a href="#" className={styles.footerNavLink}>
-                NOTÍCIAS
-              </a>
-              <a href="#" className={styles.footerNavLink}>
-                CONTATO
-              </a>
+              <h3 className={styles.footerNavTitle}>NAVEGUE NO SITE</h3>
+              {menuItems.map((item) => (
+                <a href="#" className={styles.footerNavLink} key={item}>
+                  {item}
+                </a>
+              ))}
             </nav>
           </div>
 
-          <div className={`${styles.footerSocialSection} ${styles.footerSocialSectionDarkMode}`}>
+          <div
+            className={`${styles.footerSocialSection} ${styles.footerSocialSectionDarkMode}`}
+          >
             <p className={styles.footerSocialTitle}>Acompanhe nas redes</p>
             <SocialLogin darkMode />
           </div>
