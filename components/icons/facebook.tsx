@@ -5,6 +5,7 @@ const Facebook = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width={props.width || 25}
     height={props.height || 25}
+    viewBox="0 0 24.641 24.641"
     xmlns="http://www.w3.org/2000/svg"
     fill="currentColor"
     {...props}
