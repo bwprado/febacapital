@@ -32,11 +32,12 @@ export default function Footer({ menuItems }: { menuItems: string[] }) {
             </nav>
           </div>
 
-          <div
-            className={styles.footerSocialSection}
-          >
+          <div className={styles.footerSocialSection}>
             <p className={styles.footerSocialTitle}>Acompanhe nas redes</p>
-            <SocialButtons darkMode className={styles.footerSocialButtons} />
+            <SocialButtons
+              classNameIcon={styles.footerSocialIcon}
+              className={styles.footerSocialButtons}
+            />
           </div>
 
           <div className={styles.footerSection}>
@@ -47,7 +48,9 @@ export default function Footer({ menuItems }: { menuItems: string[] }) {
             </p>
             <div className={styles.footerContact}>
               <p className={styles.footerContactInfo}>(11) 9909-9091</p>
-              <p className={styles.footerContactInfo} data-highlight="true">contato@liva.com.br</p>
+              <p className={styles.footerContactInfo} data-highlight="true">
+                contato@liva.com.br
+              </p>
             </div>
             <WhatsAppButton />
           </div>

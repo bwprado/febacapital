@@ -11,6 +11,7 @@ import { cn } from '@/lib/utils'
 import { useEffect, useRef, useState } from 'react'
 import WhatsAppButton from '../whatsapp-button'
 import XIcon from '../icons/x-icon'
+import SocialButtons from '../socials'
 
 export default function MenuMobile({
   items,
@@ -72,17 +73,14 @@ export default function MenuMobile({
 
           <div className={styles.socialSection}>
             <p className={styles.socialText}>Acompanhe nas redes</p>
-            <div className={styles.socialIcons}>
-              <a href="#" className={styles.socialIcon} aria-label="Facebook">
-                <Facebook />
-              </a>
-              <a href="#" className={styles.socialIcon} aria-label="Instagram">
-                <Instagram />
-              </a>
-            </div>
+            <SocialButtons
+              classNameIcon={styles.socialIcon}
+              className={styles.socialIcons}
+            />
           </div>
-
-          <WhatsAppButton />
+        </div>
+        <div className={styles.footer}>
+          <WhatsAppButton className={styles.whatsappButton} />
         </div>
       </dialog>
     </div>

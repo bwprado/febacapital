@@ -11,8 +11,8 @@
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 108px;
+  height: 43px;
   object-fit: contain;
   aspect-ratio: auto;
 }
@@ -23,5 +23,9 @@
   }
   .whatsappButton {
     display: none;
+  }
+  .logo {
+    width: 80px;
+    height: 32px;
   }
 }

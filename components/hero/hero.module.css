@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   gap: 96px;
-  padding: 7.75rem 0;
+  padding: 124px 25px;
   max-width: 1170px;
 }
 
@@ -37,4 +37,29 @@
 .heroButton {
   width: 172px;
   height: 47px;
+}
+
+.heroMask {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 64px 25px;
+    gap: 24px;
+  }
+  .heroMask {
+    display: none;
+  }
+  .heroTitle {
+    font-size: 28px;
+  }
+  .heroDescription {
+    font-size: 14px;
+  }
+  .heroButton {
+    width: 128px;
+    height: 44px;
+  }
 }

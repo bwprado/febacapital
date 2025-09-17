@@ -124,6 +124,12 @@
   font-size: calc(var(--font-size) - 2px);
 }
 
+.footerSocialIcon {
+  color: var(--background);
+  width: 29px;
+  height: 29px;
+}
+
 .footerBottom {
   border-top: 1px solid var(--border-color);
   padding: 24px 0;

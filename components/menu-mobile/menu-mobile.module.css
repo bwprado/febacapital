@@ -21,12 +21,12 @@
 .dialogContent {
   background: var(--background);
   width: 100vw;
-  height: 100vh;
-  padding: 24px;
+  height: calc(100vh - 84px);
+  padding: 25px;
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 40px;
 }
 
 .dialogHeader {
@@ -86,14 +86,13 @@
 }
 
 .socialIcons {
-  display: flex;
-  gap: 12px;
+  justify-content: start !important;
+  gap: 16px;
 }
 
 .socialIcon {
-  width: 40px;
-  height: 40px;
-  background: var(--foreground);
+  width: 29px;
+  height: 29px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -120,6 +119,19 @@
   color: var(--foreground);
   outline: none;
   right: 0;
+}
+
+.footer {
+  background: var(--muted);
+  padding: 19px 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.whatsappButton {
+  width: 100% !important;
+  height: 46px !important;
 }
 
 @media (max-width: 1024px) {

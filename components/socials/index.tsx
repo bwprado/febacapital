@@ -4,28 +4,18 @@ import Instagram from '../icons/instagram'
 import styles from './socials.module.css'
 
 export default function SocialButtons({
-  darkMode = false,
-  className
+  className,
+  classNameIcon
 }: {
-  darkMode?: boolean
   className?: string
+  classNameIcon?: string
 }) {
   return (
-    <ul
-      className={cn(
-        styles.socialIcons,
-        darkMode ? styles?.darkMode || '' : '',
-        className
-      )}
-    >
+    <ul className={cn(styles.socialIcons, className)}>
       <li>
         <a href="#" title="Facebook">
           <Facebook
-            className={cn(
-              styles.socialIcon,
-              darkMode ? styles.darkMode : '',
-              className
-            )}
+            className={cn(styles.socialIcon, classNameIcon)}
             width={24}
             height={24}
           />
@@ -34,9 +24,7 @@ export default function SocialButtons({
       <li>
         <a href="#" title="Instagram">
           <Instagram
-            className={`${styles.socialIcon} ${
-              darkMode ? styles.darkMode : ''
-            }`}
+            className={cn(styles.socialIcon, classNameIcon)}
             width={24}
             height={24}
           />
