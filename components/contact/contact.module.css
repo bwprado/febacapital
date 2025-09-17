@@ -86,6 +86,21 @@
 
 .stack {
   display: flex;
+  transition: margin 0.3s ease-in-out;
+}
+
+.stack:hover {
+  margin-left: 0px;
+}
+
+.stack:hover .avatar:nth-child(2) {
+  margin-left: 0px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.stack:hover .avatar:nth-child(3) {
+  margin-left: 0px;
+  transition: margin-left 0.3s ease-in-out;
 }
 
 .avatar {
@@ -93,9 +108,10 @@
   height: 54px;
   border-radius: 50%;
   border: 3px solid var(--background);
-  transition: transform 0.2s ease;
+  transition: margin-left 0.3s ease-in-out;
   object-fit: cover;
-  object-position: 0%;
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
 }
 
 .avatar:nth-child(2) {
@@ -111,12 +127,10 @@
   display: flex;
   left: 50%;
   transform: translateX(-50%);
-  gap: clamp(10rem, 10vw, 10rem);
+  gap: clamp(100px, 100px, 180px);
   align-items: center;
   width: 100%;
-  max-width: var(--desktop-max-width);
-  padding-left: var(--desktop-padding);
-  padding-right: var(--desktop-padding);
+  max-width: 1170px;
   justify-content: start;
   z-index: 2;
 }

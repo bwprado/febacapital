@@ -1,20 +1,17 @@
 [
   {
     "name": "John Doe",
-    "image": "/images/faces.png",
-    "whatsapp": "https://wa.me/1234567890",
-    "facePosition": "50% 10%"
+    "image": "/images/face-1.png",
+    "whatsapp": "https://wa.me/1234567890"
   },
   {
     "name": "Jane Doe",
-    "image": "/images/faces.png",
-    "whatsapp": "https://wa.me/1234567890",
-    "facePosition": "50% 30%"
+    "image": "/images/face-2.png",
+    "whatsapp": "https://wa.me/1234567890"
   },
   {
     "name": "Susan Doe",
-    "image": "/images/faces.png",
-    "whatsapp": "https://wa.me/1234567890",
-    "facePosition": "50% 50%"
+    "image": "/images/face-3.png",
+    "whatsapp": "https://wa.me/1234567890"
   }
 ]

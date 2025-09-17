@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils'
 import Facebook from '../icons/facebook'
 import Instagram from '../icons/instagram'
 import styles from './socials.module.css'
@@ -11,16 +12,20 @@ export default function SocialButtons({
 }) {
   return (
     <ul
-      className={`${styles.socialIcons} ${
-        darkMode ? styles?.darkMode || '' : ''
-      } ${className}`}
+      className={cn(
+        styles.socialIcons,
+        darkMode ? styles?.darkMode || '' : '',
+        className
+      )}
     >
       <li>
         <a href="#" title="Facebook">
           <Facebook
-            className={`${styles.socialIcon} ${
-              darkMode ? styles.darkMode : ''
-            }`}
+            className={cn(
+              styles.socialIcon,
+              darkMode ? styles.darkMode : '',
+              className
+            )}
             width={24}
             height={24}
           />

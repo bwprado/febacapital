@@ -10,7 +10,7 @@ export default function Form() {
       <form className={styles.form}>
         <Input defaultValue="Emerson Feba Cap" label="Nome" id="name" />
         <Input label="Telefone" id="phone" />
-        <Input label="E-mail" id="email" />
+        <Input label="E-mail" id="email" autoComplete='off' />
         <TextArea label="Mensagem" id="message" />
 
         <Button type="submit" variant="action">

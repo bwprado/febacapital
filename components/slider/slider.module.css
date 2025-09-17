@@ -1,4 +1,3 @@
-/* Slider Container */
 .sliderContainer {
   position: relative;
   width: 100%;
@@ -10,7 +9,6 @@
   opacity: 1;
 }
 
-/* No Images State */
 .noImages {
   width: 100%;
   height: 24rem;
@@ -22,14 +20,12 @@
   font-size: 1.125rem;
 }
 
-/* Slider Track */
 .sliderTrack {
   display: flex;
   transition: transform 0.5s ease-in-out;
   height: 100%;
 }
 
-/* Individual Slide */
 .slide {
   width: 100%;
   height: 100%;
@@ -43,7 +39,6 @@
   object-fit: cover;
 }
 
-/* Overlay Content */
 .overlay {
   position: absolute;
   inset: 0;
@@ -70,7 +65,6 @@
   margin-bottom: 16px;
   line-height: 1.2;
 }
-/* flag */
 
 .subtitle {
   font-size: 14px;
@@ -112,7 +106,6 @@
   height: 47px;
 }
 
-/* Dots Indicator */
 .dotsContainer {
   position: absolute;
   bottom: 1.5rem;
@@ -140,41 +133,37 @@
   background-color: white;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-  .title {
-    font-size: 2.5rem;
+  .sliderContainer {
+    height: 424px;
+  }
+
+  .slideImage {
+    height: 424px;
   }
 
   .subtitle {
-    font-size: 1.125rem;
+    font-size: 12px;
+  }
+
+  .tag {
+    font-size: 12px;
+  }
+
+  .arrowsContainer {
+    bottom: 0;
+    justify-content: start;
+    top: auto;
+    padding-left: 25px;
+    transform: translate(-50%, 0);
+  }
+
+  .title {
+    font-size: 32px;
+    margin-top: 16px;
   }
 
   .contentContainer {
-    padding: 0 1rem;
-  }
-
-  .arrowButton {
-    padding: 0.5rem;
-  }
-
-  .arrowIcon {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-  }
-
-  .button {
-    padding: 0.625rem 1.5rem;
-    font-size: 1rem;
+    padding: 0 25px;
   }
 }

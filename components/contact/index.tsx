@@ -7,7 +7,7 @@ import { getConsultants } from '@/app/services/consultants'
 export default async function Contact() {
   const consultants = await getConsultants()
   return (
-    <section className={styles.contact}>
+    <section className={styles.contact} id="contact">
       {/* Left Section - Dark Background */}
       <div className={styles.leftSection}></div>
 
@@ -31,9 +31,6 @@ export default async function Contact() {
                   className={styles.avatar}
                   width={100}
                   height={100}
-                  style={{
-                    objectPosition: consultant.facePosition
-                  }}
                 />
               ))}
             </div>

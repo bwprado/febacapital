@@ -1,5 +1,5 @@
 import Footer from '@/components/footer'
-import Header from '@/components/header'
+import Header from '@/components/header/header'
 import Hero from '@/components/hero'
 import Slider from '@/components/slider'
 import Contact from '@/components/contact'

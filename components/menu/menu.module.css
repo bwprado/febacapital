@@ -1,0 +1,28 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  height: 100%;
+  list-style: none;
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    display: none;
+  }
+}
+
+.link {
+  font-size: var(--font-sm);
+  font-weight: 500;
+  list-style: none;
+  text-decoration: none;
+  color: var(--primary-foreground);
+}
+
+.link:hover {
+  color: var(--primary);
+  cursor: pointer;
+}

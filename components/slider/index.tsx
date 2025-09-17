@@ -104,7 +104,6 @@ export default function Slider({
         ))}
       </div>
 
-      {/* Navigation arrows */}
       {showArrows && images.length > 1 && (
         <div className={styles.arrowsContainer}>
           <SliderButtons
@@ -121,22 +120,6 @@ export default function Slider({
           >
             <ArrowRight />
           </SliderButtons>
-        </div>
-      )}
-
-      {/* Dots indicator */}
-      {showDots && images.length > 1 && (
-        <div className={styles.dotsContainer}>
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`${styles.dot} ${
-                index === currentIndex ? styles.dotActive : ''
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
         </div>
       )}
     </div>
