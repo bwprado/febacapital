@@ -212,13 +212,23 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .contact {
-    grid-template-columns: 1fr;
-    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 968px;
   }
 
-  .leftSection,
-  .rightSection {
+  .leftSection {
+    min-height: 968px;
     padding: 40px 20px;
+  }
+
+  .rightSection {
+    display: none;
+  }
+
+  .middleSection {
+    flex-direction: column-reverse;
+    gap: 40px;
   }
 
   .heading {
