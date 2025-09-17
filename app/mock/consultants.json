@@ -3,18 +3,18 @@
     "name": "John Doe",
     "image": "/images/faces.png",
     "whatsapp": "https://wa.me/1234567890",
-    "facePosition": "0% 0%"
+    "facePosition": "50% 10%"
   },
   {
     "name": "Jane Doe",
     "image": "/images/faces.png",
     "whatsapp": "https://wa.me/1234567890",
-    "facePosition": "25% 0%"
+    "facePosition": "50% 30%"
   },
   {
     "name": "Susan Doe",
     "image": "/images/faces.png",
     "whatsapp": "https://wa.me/1234567890",
-    "facePosition": "50% 0%"
+    "facePosition": "50% 50%"
   }
 ]

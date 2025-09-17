@@ -22,29 +22,25 @@ export default async function Contact() {
           </p>
           <div className={styles.consultants}>
             <p className={styles.consultantsLabel}>Consultores online</p>
-            <div className={styles.profiles}>
+            <div className={styles.stack}>
               {consultants.map((consultant) => (
-                <div className={styles.profile} key={consultant.name}>
-                  <div className={styles.avatar}>
-                    <Image
-                      src={consultant.image}
-                      alt={consultant.name}
-                      className={styles.avatarImage}
-                      width={60}
-                      height={60}
-                      style={{
-                        objectPosition: consultant.facePosition
-                      }}
-                    />
-                  </div>
-                </div>
+                <Image
+                  key={consultant.name}
+                  src={consultant.image}
+                  alt={consultant.name}
+                  className={styles.avatar}
+                  width={100}
+                  height={100}
+                  style={{
+                    objectPosition: consultant.facePosition
+                  }}
+                />
               ))}
             </div>
           </div>
         </div>
         <Form />
       </div>
-      {/* Right Section - Form Overlay */}
       <div className={styles.rightSection}></div>
     </section>
   )

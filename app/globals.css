@@ -144,6 +144,11 @@ textarea:not([rows]) {
   --text-xs: 12px;
   --logo: url('/liva.png');
 
+  --desktop-padding: 135px;
+  --desktop-max-width: 1440px;
+  --mobile-padding: 8px;
+  --mobile-max-width: 375px;
+
   /* Footer specific variables */
   --footer-bg: #000000;
   --footer-text: #ffffff;
@@ -166,8 +171,8 @@ body {
   overflow-x: hidden;
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Urbane', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Urbane', 'Urbanist', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -228,7 +233,7 @@ a {
 }
 
 .link {
-  font-size: var(--font-size);
+  font-size: var(--font-sm);
   font-weight: 500;
   list-style: none;
   text-decoration: none;

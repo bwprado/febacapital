@@ -3,7 +3,7 @@ import { capitalize } from '@/lib/utils'
 
 export default function Button(
   props: React.ButtonHTMLAttributes<HTMLButtonElement> & {
-    variant: 'primary' | 'action' | 'outline'
+    variant: 'primary' | 'action' | 'outline' | 'secondary'
   }
 ) {
   const { className, variant, ...rest } = props

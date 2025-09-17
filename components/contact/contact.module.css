@@ -73,7 +73,7 @@
 }
 
 .consultants {
-  margin-top: 60px;
+  margin-top: 48px;
 }
 
 .consultantsLabel {
@@ -84,32 +84,26 @@
   color: var(--typography);
 }
 
-.profiles {
-  display: grid;
-  place-content: center;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.profile {
-  width: 60px;
-  height: 60px;
+.stack {
+  display: flex;
 }
 
 .avatar {
-  width: 100%;
-  height: 100%;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #4a4a4a 0%, #6a6a6a 100%);
-  border: 2px solid #666;
-  overflow: hidden;
+  border: 3px solid var(--background);
+  transition: transform 0.2s ease;
+  object-fit: cover;
+  object-position: 0%;
 }
 
-.avatarImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
+.avatar:nth-child(2) {
+  margin-left: -15px;
+}
+
+.avatar:nth-child(3) {
+  margin-left: -15px;
 }
 
 .middleSection {
@@ -120,7 +114,9 @@
   gap: clamp(10rem, 10vw, 10rem);
   align-items: center;
   width: 100%;
-  max-width: 1170px;
+  max-width: var(--desktop-max-width);
+  padding-left: var(--desktop-padding);
+  padding-right: var(--desktop-padding);
   justify-content: start;
   z-index: 2;
 }
