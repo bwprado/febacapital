@@ -1,0 +1,10 @@
+.filterButton {
+  width: 174px;
+  height: 47px;
+}
+
+@media (max-width: 768px) {
+  .filterButton {
+    width: 100%;
+  }
+}

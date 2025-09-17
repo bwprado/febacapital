@@ -146,7 +146,7 @@ textarea:not([rows]) {
 
   --desktop-padding: 135px;
   --desktop-max-width: 1440px;
-  --mobile-padding: 8px;
+  --mobile-padding: 25px;
   --mobile-max-width: 375px;
 
   /* Footer specific variables */

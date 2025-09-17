@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { SVGProps } from 'react'
 
-const Filters = (props: SVGProps<SVGSVGElement>) => (
+const FiltersIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width={17}
     height={15}
@@ -16,4 +16,4 @@ const Filters = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
-export default Filters
+export default FiltersIcon

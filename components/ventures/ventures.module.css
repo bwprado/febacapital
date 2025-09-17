@@ -23,7 +23,6 @@
 
 .titleRegular {
   font-weight: 300;
-  font-style: light;
   font-size: 48px;
   line-height: 1;
   color: var(--typography-foreground);
@@ -31,7 +30,6 @@
 
 .titleHighlight {
   font-weight: 500;
-  font-style: medium;
   font-size: 48px;
   line-height: 1;
   color: var(--primary);
@@ -97,7 +95,6 @@
   border-radius: var(--radius);
   font-size: var(--text-xs);
   font-weight: 500;
-  font-style: medium;
   line-height: 1.2;
   z-index: 2;
 }
@@ -115,6 +112,14 @@
   justify-content: end;
 }
 
+.ventureName {
+  color: var(--background);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  line-height: 1.2;
+  z-index: 2;
+}
+
 .card:first-child .content {
   padding: 54px 43px;
 }
@@ -124,19 +129,9 @@
   grid-row: span 2;
 }
 
-.ventureName {
-  color: var(--background);
-  font-weight: 500;
-  font-size: var(--text-sm);
-  font-style: light;
-  line-height: 1.2;
-  z-index: 2;
-}
-
 .card:first-child .ventureName {
   font-size: 18px;
   font-weight: 500;
-  font-style: medium;
   line-height: 1.2;
 }
 
@@ -154,49 +149,55 @@
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .largeCard {
-    grid-row: span 1;
-  }
 }
 
 @media (max-width: 768px) {
   .ventures {
     padding: 0 var(--mobile-padding);
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    gap: 24px;
+    padding-bottom: 53px;
+    padding-top: 64px;
+  }
+
+  .venture {
+    min-height: 280px;
   }
 
   .header {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 24px;
     align-items: flex-start;
+    margin-bottom: 50px;
   }
 
-  .title {
-    font-size: 1.875rem;
+  .title span {
+    font-size: 32px;
+    line-height: 1.2;
   }
 
   .grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 
   .imageContainer {
-    height: 16rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 1.5rem;
+    height: 280px;
   }
 
-  .imageContainer {
-    height: 14rem;
+  .card:first-child .content {
+    padding-left: 24px;
   }
 
   .ventureName {
     font-size: 1.125rem;
+  }
+
+  .loadMoreButton {
+    padding: 14px 30px;
+  }
+
+  .filterButton {
+    width: 100%;
   }
 }

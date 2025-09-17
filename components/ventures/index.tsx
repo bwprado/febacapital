@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import Button from '../button'
-import Filters from '../icons/filters'
+import FiltersIcon from '../icons/filters'
 import styles from './ventures.module.css'
+import Filters from '../filters'
 
 interface Venture {
   id: string
@@ -24,19 +25,13 @@ export default function Ventures({ ventures }: VenturesProps) {
           <span className={styles.titleRegular}>Confira todos os </span>
           <span className={styles.titleHighlight}>empreendimentos da Liva</span>
         </h2>
-        <Button variant="secondary" className={styles.filterButton}>
-          <Filters />
-          FILTROS
-        </Button>
+        <Filters />
       </div>
 
       {/* Ventures Grid */}
       <div className={styles.grid}>
         {ventures.map((venture) => (
-          <div
-            key={venture.id}
-            className={styles.card}
-          >
+          <div key={venture.id} className={styles.card}>
             <div className={styles.imageContainer}>
               <Image
                 src={venture.image}
@@ -60,7 +55,7 @@ export default function Ventures({ ventures }: VenturesProps) {
 
       {/* Load More Button */}
       <div className={styles.loadMoreContainer}>
-        <Button variant="primary" disabled>
+        <Button variant="primary" disabled className={styles.loadMoreButton}>
           CARREGAR MAIS
         </Button>
       </div>
