@@ -1,0 +1,28 @@
+{
+  "images": [
+    {
+      "alt": "Pré Lançamento",
+      "buttonLink": "#",
+      "buttonText": "SAIBA MAIS",
+      "src": "/images/slider-1.png",
+      "subtitle": "Apartamento com 3 dormitórios sendo 1 suíte.",
+      "title": "Barra View"
+    },
+    {
+      "alt": "Pré Lançamento",
+      "buttonLink": "#",
+      "buttonText": "SAIBA MAIS",
+      "src": "/images/slider-2.png",
+      "subtitle": "Cobertura com vista incrível para o mar.",
+      "title": "Cobertura Mar"
+    },
+    {
+      "alt": "Pré Lançamento",
+      "buttonLink": "#",
+      "buttonText": "SAIBA MAIS",
+      "src": "/images/slider-3.png",
+      "subtitle": "Apartamento com 5 suítes, 2 vagas de garagem e vista para a lagoa.",
+      "title": "Lagoa View"
+    }
+  ]
+}

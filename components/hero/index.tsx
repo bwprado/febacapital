@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import styles from './hero.module.css'
+import Button from '../button'
 
 export default function Hero() {
   return (
@@ -17,6 +18,7 @@ export default function Hero() {
           histórias de vida e que são desenvolvidos para que você viva momentos
           incríveis ao lado da sua família.
         </span>
+        <Button variant="primary" className={styles.heroButton}>SAIBA MAIS</Button>
       </div>
     </main>
   )

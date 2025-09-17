@@ -1,0 +1,177 @@
+/* Slider Container */
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sliderContainer:hover .arrowButton {
+  opacity: 1;
+}
+
+/* No Images State */
+.noImages {
+  width: 100%;
+  height: 24rem;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 1.125rem;
+}
+
+/* Slider Track */
+.sliderTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+/* Individual Slide */
+.slide {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.slideImage {
+  width: 100%;
+  height: 750px;
+  object-fit: cover;
+}
+
+/* Overlay Content */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+}
+
+.contentContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  color: white;
+}
+
+.content {
+  max-width: 32rem;
+}
+
+.title {
+  font-size: 80px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+/* flag */
+
+.subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 500;
+  font-style: medium;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  font-size: 1.25rem;
+  background-color: var(--secondary);
+  color: var(--foreground);
+  border-radius: var(--radius);
+  padding: 4px 1rem;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.arrowsContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.button {
+  margin-top: 48px;
+  width: 174px;
+  height: 47px;
+}
+
+/* Dots Indicator */
+.dotsContainer {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.dotActive {
+  background-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+  }
+
+  .contentContainer {
+    padding: 0 1rem;
+  }
+
+  .arrowButton {
+    padding: 0.5rem;
+  }
+
+  .arrowIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .button {
+    padding: 0.625rem 1.5rem;
+    font-size: 1rem;
+  }
+}

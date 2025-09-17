@@ -1,21 +1,22 @@
 import styles from './button.module.css'
+import { capitalize } from '@/lib/utils'
 
 export default function Button(
   props: React.ButtonHTMLAttributes<HTMLButtonElement> & {
-    variant: 'primary' | 'action'
-    children: React.ReactNode
+    variant: 'primary' | 'action' | 'outline'
   }
 ) {
   const { className, variant, ...rest } = props
   const selectedClassName = [
     className,
-    variant === 'primary' ? styles.btnPrimary : styles.btnAction
+    styles.btnBase,
+    styles[`btn${capitalize(variant)}`]
   ]
     .filter(Boolean)
     .join(' ')
   return (
     <button className={selectedClassName} {...rest}>
-      {props.children}
+      {rest.children}
     </button>
   )
 }

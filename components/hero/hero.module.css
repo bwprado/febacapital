@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   gap: 96px;
+  padding: 7.75rem 0;
   max-width: 1170px;
 }
 
@@ -28,6 +29,12 @@
 
 .heroDescription {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
+  font-style: light;
   color: var(--typography-foreground-light);
+}
+
+.heroButton {
+  width: 172px;
+  height: 47px;
 }

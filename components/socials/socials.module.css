@@ -12,7 +12,6 @@
   display: flex;
   color: var(--foreground);
   align-items: center;
-  height: max-content;
   justify-content: center;
   text-decoration: none;
   transition: all 0.2s ease;

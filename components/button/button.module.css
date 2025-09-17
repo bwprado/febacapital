@@ -1,16 +1,20 @@
-.btnPrimary {
-  background-color: var(--background);
-  color: var(--foreground);
-  border: 2px solid var(--foreground);
+/* Base button styles - common attributes */
+.btnBase {
   border-radius: var(--radius);
   cursor: pointer;
-  font-size: var(--font-size);
+  font-size: var(--text-md);
   padding: var(--btn-padding);
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+.btnPrimary {
+  background-color: var(--background);
+  color: var(--foreground);
+  border: 2px solid var(--foreground);
 }
 
 .btnPrimary:hover {
@@ -22,17 +26,19 @@
   background-color: var(--primary);
   color: var(--background);
   border: none;
-  border-radius: var(--radius);
-  cursor: pointer;
-  padding: var(--btn-padding);
-  font-size: var(--font-size);
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-content: center;
 }
 
 .btnAction:hover {
   background-color: var(--primary-light);
+}
+
+.btnOutline {
+  background-color: transparent;
+  color: var(--background);
+  border: 2px solid var(--background);
+}
+
+.btnOutline:hover {
+  background-color: var(--foreground);
+  color: var(--background);
 }
