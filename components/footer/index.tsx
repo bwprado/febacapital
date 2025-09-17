@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import SocialLogin from '../socials'
+import SocialButtons from '../socials'
 import WhatsAppButton from '../whatsapp-button'
 import styles from './footer.module.css'
 
@@ -33,10 +33,10 @@ export default function Footer({ menuItems }: { menuItems: string[] }) {
           </div>
 
           <div
-            className={`${styles.footerSocialSection} ${styles.footerSocialSectionDarkMode}`}
+            className={styles.footerSocialSection}
           >
             <p className={styles.footerSocialTitle}>Acompanhe nas redes</p>
-            <SocialLogin darkMode />
+            <SocialButtons darkMode className={styles.footerSocialButtons} />
           </div>
 
           <div className={styles.footerSection}>
@@ -47,7 +47,7 @@ export default function Footer({ menuItems }: { menuItems: string[] }) {
             </p>
             <div className={styles.footerContact}>
               <p className={styles.footerContactInfo}>(11) 9909-9091</p>
-              <p className={styles.footerContactInfo}>contato@liva.com.br</p>
+              <p className={styles.footerContactInfo} data-highlight="true">contato@liva.com.br</p>
             </div>
             <WhatsAppButton />
           </div>

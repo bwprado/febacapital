@@ -2,7 +2,7 @@ import Facebook from '../icons/facebook'
 import Instagram from '../icons/instagram'
 import styles from './socials.module.css'
 
-export default function SocialLogin({
+export default function SocialButtons({
   darkMode = false,
   className
 }: {

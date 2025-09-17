@@ -23,7 +23,8 @@
 
 .footerGrid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
   gap: 32px;
   margin-bottom: 32px;
 }
@@ -40,9 +41,24 @@
   gap: 24px;
 }
 
+.footerSection:first-child {
+  align-items: start;
+}
+
+.footerSection:last-child {
+  align-items: end;
+  gap: 16px;
+}
+
+.footerSocialButtons {
+  height: fit-content;
+}
+
 .footerDescription {
   color: var(--footer-text);
-  font-size: calc(var(--font-size) - 2px);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  font-style: medium;
   line-height: 1.6;
 }
 
@@ -77,19 +93,30 @@
 .footerContact {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  align-items: flex-end;
+  gap: 4px;
 }
 
 .footerContactInfo {
   color: var(--footer-text);
-  font-size: calc(var(--font-size) - 2px);
+  font-size: var(--text-md);
+  font-weight: 600;
+  font-style: bold;
+}
+
+.footerContactInfo[data-highlight='true'] {
+  font-weight: 500;
+  font-style: medium;
+  font-size: var(--text-sm);
+  color: var(--primary-muted);
 }
 
 .footerSocialSection {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
+  align-items: start;
+  justify-content: end;
+  gap: 24px;
 }
 
 .footerSocialTitle {
@@ -107,6 +134,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 17px;
   color: var(--typography-foreground-muted);
   gap: 8px;
 }

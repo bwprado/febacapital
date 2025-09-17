@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Menu from './menu'
-import SocialLogin from './socials'
+import SocialButtons from './socials'
 import WhatsAppButton from './whatsapp-button'
 
 export default function Header({ menuItems }: { menuItems: string[] }) {
@@ -14,7 +14,7 @@ export default function Header({ menuItems }: { menuItems: string[] }) {
         className="logo"
       />
       <Menu items={menuItems} />
-      <SocialLogin />
+      <SocialButtons />
       <WhatsAppButton />
     </header>
   )
