@@ -30,7 +30,6 @@ export default function Ventures({ ventures }: { ventures: Venture[] }) {
         <Filters open={open} setOpen={setOpen} />
       </div>
 
-      {/* Ventures Grid */}
       <div className={styles.grid}>
         {ventures.map((venture) => (
           <div key={venture.id} className={styles.card}>
@@ -58,7 +57,6 @@ export default function Ventures({ ventures }: { ventures: Venture[] }) {
         ))}
       </div>
 
-      {/* Load More Button */}
       <div className={styles.loadMoreContainer}>
         <Button variant="primary" disabled className={styles.loadMoreButton}>
           CARREGAR MAIS

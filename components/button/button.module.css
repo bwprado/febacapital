@@ -1,4 +1,3 @@
-/* Base button styles - common attributes */
 .btnBase {
   border-radius: var(--radius);
   cursor: pointer;

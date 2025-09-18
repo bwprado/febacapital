@@ -63,7 +63,6 @@ export default function Slider({
 
   return (
     <div className={styles.sliderContainer}>
-      {/* Main slider container */}
       <div
         className={styles.sliderTrack}
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -78,7 +77,6 @@ export default function Slider({
               className={styles.slideImage}
             />
 
-            {/* Overlay content */}
             {(image.title || image.subtitle || image.buttonText) && (
               <div className={styles.overlay}>
                 <div className={styles.contentContainer}>

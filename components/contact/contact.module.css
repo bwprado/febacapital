@@ -209,7 +209,6 @@
   background: var(--primary-light);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .contact {
     display: flex;

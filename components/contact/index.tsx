@@ -8,7 +8,6 @@ export default async function Contact() {
   const consultants = await getConsultants()
   return (
     <section className={styles.contact} id="contact">
-      {/* Left Section - Dark Background */}
       <div className={styles.leftSection}></div>
 
       <div className={styles.middleSection}>
