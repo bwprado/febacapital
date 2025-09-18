@@ -6,7 +6,14 @@ import Button from '../button'
 export default function Hero() {
   return (
     <main className={styles.hero}>
-      <Image src="/hero-mask.svg" alt="Hero" width={472} height={472} className={styles.heroMask} />
+      <Image 
+        src="/hero-mask.svg" 
+        alt="Liva - Construímos confiança e realizamos sonhos" 
+        width={472} 
+        height={472} 
+        className={styles.heroMask}
+        priority
+      />
       <div className={styles.heroContent}>
         <h1 className={styles.heroTitle}>
           <span>Contruimos confiança e </span>

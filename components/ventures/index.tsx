@@ -36,9 +36,10 @@ export default function Ventures({ ventures }: { ventures: Venture[] }) {
             <div className={styles.imageContainer}>
               <Image
                 src={venture.image}
-                alt={venture.name}
+                alt={`Empreendimento ${venture.name} - ${venture.isPreLaunch ? 'Pré-lançamento' : 'Lançamento'} da Liva`}
                 fill
                 className={styles.image}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
 
               <div className={styles.overlay} />

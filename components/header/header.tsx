@@ -10,10 +10,11 @@ export default function Header({ menuItems }: { menuItems: string[] }) {
     <header className={styles.header}>
       <Image
         src="/liva.png"
-        alt="liva"
+        alt="Liva - Empreendimentos Imobiliários"
         width={108}
         height={43}
         className={styles.logo}
+        priority
       />
       <Menu items={menuItems} />
       <div className={styles.socialButtons}>

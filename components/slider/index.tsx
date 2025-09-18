@@ -71,10 +71,12 @@ export default function Slider({
           <div key={index} className={styles.slide}>
             <Image
               src={image.src}
-              alt={image.alt}
+              alt={image.alt || `Empreendimento ${image.title || 'Liva'} - ${image.subtitle || 'Real Estate'}`}
               width={1920}
               height={750}
               className={styles.slideImage}
+              priority={index === 0}
+              sizes="100vw"
             />
 
             {(image.title || image.subtitle || image.buttonText) && (
