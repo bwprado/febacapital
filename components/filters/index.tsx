@@ -44,16 +44,17 @@ export default function Filters() {
       location: 'all',
       propertyType: 'all'
     })
+    setIsOpen((prev) => !prev)
   }
 
   return (
     <div className={styles.filtersContainer}>
       <Button
-        variant="primary"
+        variant={isOpen ? 'secondary' : 'primary'}
         className={styles.filterButton}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={handleClearFilters}
       >
-        <FiltersIcon />
+        {isOpen ? <XIcon /> : <FiltersIcon />}
         FILTROS
       </Button>
 
