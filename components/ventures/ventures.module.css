@@ -11,7 +11,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   margin-bottom: 64px;
 }
 
@@ -109,7 +109,7 @@
   flex-direction: column;
   gap: 18px;
   padding: 29px 24px;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .ventureName {
