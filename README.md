@@ -129,10 +129,8 @@ pnpm dev
 
 ### Responsive Design
 
-- Mobile-first approach
 - Breakpoints: 768px, 1024px
 - Flexible grid layouts
-- Touch-friendly interactions
 
 ### Performance
 
