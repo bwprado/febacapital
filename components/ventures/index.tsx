@@ -1,31 +1,33 @@
+'use client'
+
 import Image from 'next/image'
 import Button from '../button'
 import FiltersIcon from '../icons/filters'
 import styles from './ventures.module.css'
 import Filters from '../filters'
+import VentureDetails from './venture-details'
 
-interface Venture {
-  id: string
-  name: string
-  image: string
-  isPreLaunch?: boolean
-  isLarge?: boolean
-}
+import { useState } from 'react'
+import { Venture } from '@/app/services/ventures'
 
-interface VenturesProps {
-  ventures: Venture[]
-}
-
-export default function Ventures({ ventures }: VenturesProps) {
+export default function Ventures({ ventures }: { ventures: Venture[] }) {
+  const [open, setOpen] = useState(false)
   return (
     <section className={styles.ventures}>
-      {/* Header */}
       <div className={styles.header}>
         <h2 className={styles.title}>
           <span className={styles.titleRegular}>Confira todos os </span>
           <span className={styles.titleHighlight}>empreendimentos da Liva</span>
         </h2>
-        <Filters />
+        <Button
+          variant="primary"
+          className={styles.filterButton}
+          onClick={() => setOpen(!open)}
+        >
+          <FiltersIcon />
+          FILTROS
+        </Button>
+        <Filters open={open} setOpen={setOpen} />
       </div>
 
       {/* Ventures Grid */}
@@ -41,6 +43,7 @@ export default function Ventures({ ventures }: VenturesProps) {
               />
 
               <div className={styles.overlay} />
+              <div className={styles.hoverOverlay} />
 
               <div className={styles.content}>
                 {venture.isPreLaunch && (
@@ -48,6 +51,8 @@ export default function Ventures({ ventures }: VenturesProps) {
                 )}
                 <div className={styles.ventureName}>{venture.name}</div>
               </div>
+
+              <VentureDetails venture={venture} />
             </div>
           </div>
         ))}

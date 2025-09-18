@@ -1,12 +1,9 @@
 'use client'
 
-import Button from '../button'
-import FiltersIcon from '../icons/filters'
-import XIcon from '../icons/x-icon'
 import Select from '../select'
 import styles from './filters.module.css'
 
-import { useState } from 'react'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
 const developmentStageOptions = [
   { value: 'planning', label: 'Planejamento' },
@@ -26,8 +23,13 @@ const propertyTypeOptions = [
   { value: 'mixed', label: 'Misto' }
 ]
 
-export default function Filters() {
-  const [isOpen, setIsOpen] = useState(false)
+export default function Filters({
+  open,
+  setOpen
+}: {
+  open: boolean
+  setOpen: Dispatch<SetStateAction<boolean>>
+}) {
   const [filters, setFilters] = useState({
     developmentStage: 'all',
     location: 'all',
@@ -38,57 +40,44 @@ export default function Filters() {
     setFilters((prev) => ({ ...prev, [key]: value }))
   }
 
-  const handleClearFilters = () => {
+  useEffect(() => {
+    if (open) return
     setFilters({
       developmentStage: 'all',
       location: 'all',
       propertyType: 'all'
     })
-    setIsOpen((prev) => !prev)
-  }
+  }, [open])
+
+  if (!open) return null
 
   return (
-    <div className={styles.filtersContainer}>
-      <Button
-        variant={isOpen ? 'secondary' : 'primary'}
-        className={styles.filterButton}
-        onClick={handleClearFilters}
-      >
-        {isOpen ? <XIcon /> : <FiltersIcon />}
-        FILTROS
-      </Button>
+    <div className={styles.filterDropdown}>
+      <div className={styles.filterOptions}>
+        <Select
+          options={developmentStageOptions}
+          placeholder="Estágio do empreendimento"
+          value={filters.developmentStage}
+          onChange={(value) => handleFilterChange('developmentStage', value)}
+          aria-label="Estágio do empreendimento"
+        />
 
-      {isOpen && (
-        <div className={styles.filterDropdown}>
-          <div className={styles.filterOptions}>
-            <Select
-              options={developmentStageOptions}
-              placeholder="Estágio do empreendimento"
-              value={filters.developmentStage}
-              onChange={(value) =>
-                handleFilterChange('developmentStage', value)
-              }
-              aria-label="Estágio do empreendimento"
-            />
+        <Select
+          options={locationOptions}
+          placeholder="Localização"
+          value={filters.location}
+          onChange={(value) => handleFilterChange('location', value)}
+          aria-label="Localização"
+        />
 
-            <Select
-              options={locationOptions}
-              placeholder="Localização"
-              value={filters.location}
-              onChange={(value) => handleFilterChange('location', value)}
-              aria-label="Localização"
-            />
-
-            <Select
-              options={propertyTypeOptions}
-              placeholder="Tipo de imóvel"
-              value={filters.propertyType}
-              onChange={(value) => handleFilterChange('propertyType', value)}
-              aria-label="Tipo de imóvel"
-            />
-          </div>
-        </div>
-      )}
+        <Select
+          options={propertyTypeOptions}
+          placeholder="Tipo de imóvel"
+          value={filters.propertyType}
+          onChange={(value) => handleFilterChange('propertyType', value)}
+          aria-label="Tipo de imóvel"
+        />
+      </div>
     </div>
   )
 }

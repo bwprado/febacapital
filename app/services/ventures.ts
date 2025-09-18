@@ -4,6 +4,9 @@ export interface Venture {
   image: string
   isPreLaunch?: boolean
   isLarge?: boolean
+  city?: string
+  neighborhood?: string
+  features?: string[]
 }
 
 export async function getVentures(): Promise<Venture[]> {
